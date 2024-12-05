@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ассортимент</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Игры</h1>
+    <ul>
+        {% for game in games %}
+        <li>{{ game.name }}
+        <button>Купить</button>
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <button><a href="http://127.0.0.1:8000/"><h4>Вернуться обратно</h4></a></button>
+    {% endblock %}
+
+</body>
+</html>
