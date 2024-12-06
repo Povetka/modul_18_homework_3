@@ -5,8 +5,18 @@
     <title>Корзина</title>
 </head>
 <body>
+    {% block content %}
     <h1>Ваша корзина:</h1>
-    <p>{{ cart_is_empty }}</p>
+        {% if games %}
+            <ul>
+                {% for games in shopping_list %}
+                <li>{{ game.name }} — {{ game.price }} руб.</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Корзина пуста</p>
+        {% endif %}
+    {% endblock %}
     <button><a href="http://127.0.0.1:8000/"><h4>Вернуться обратно</h4></a></button>
 </body>
 </html>

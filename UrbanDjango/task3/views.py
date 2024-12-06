@@ -22,8 +22,8 @@ class Basket(TemplateView):
     template_name = 'basket.html'
 
     def get(self, request):
-        cart_is_empty = 'Ой, как же так, в вашей корзине пусто!'
+        shopping_list = []
         context = {
-            'cart_is_empty': cart_is_empty,
+            'shopping_list': shopping_list,
         }
         return render(request, self.template_name, context)
